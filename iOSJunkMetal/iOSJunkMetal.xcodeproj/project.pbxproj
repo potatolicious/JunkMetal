@@ -17,6 +17,7 @@
 		C43EBAE51B4E055B004378BB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43EBAE41B4E055B004378BB /* Metal.framework */; };
 		C4FDB4F91B4E1BA300AC3DBD /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDB4F81B4E1BA300AC3DBD /* MetalKit.framework */; };
 		C4FDB4FB1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDB4FA1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework */; };
+		C4FDB4FE1B4E22D600AC3DBD /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C4FDB4FD1B4E22D600AC3DBD /* shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C43EBAE41B4E055B004378BB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		C4FDB4F81B4E1BA300AC3DBD /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		C4FDB4FA1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		C4FDB4FD1B4E22D600AC3DBD /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = shaders.metal; path = shaders/shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		C43EBABB1B4E0118004378BB /* iOSJunkMetal */ = {
 			isa = PBXGroup;
 			children = (
+				C4FDB4FC1B4E22B700AC3DBD /* shaders */,
 				C43EBAC01B4E0118004378BB /* AppDelegate.h */,
 				C43EBAC11B4E0118004378BB /* AppDelegate.m */,
 				C43EBAC31B4E0118004378BB /* ViewController.h */,
@@ -137,6 +140,14 @@
 				C43EBAE41B4E055B004378BB /* Metal.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4FDB4FC1B4E22B700AC3DBD /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C4FDB4FD1B4E22D600AC3DBD /* shaders.metal */,
+			);
+			name = shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FDB4FE1B4E22D600AC3DBD /* shaders.metal in Sources */,
 				C43EBAC51B4E0118004378BB /* ViewController.m in Sources */,
 				C43EBAC21B4E0118004378BB /* AppDelegate.m in Sources */,
 				C43EBABF1B4E0118004378BB /* main.m in Sources */,
