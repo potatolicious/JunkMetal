@@ -14,6 +14,9 @@
 		C43EBACA1B4E0118004378BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43EBAC91B4E0118004378BB /* Images.xcassets */; };
 		C43EBACD1B4E0118004378BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43EBACB1B4E0118004378BB /* LaunchScreen.xib */; };
 		C43EBAD91B4E0118004378BB /* iOSJunkMetalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43EBAD81B4E0118004378BB /* iOSJunkMetalTests.m */; };
+		C43EBAE51B4E055B004378BB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43EBAE41B4E055B004378BB /* Metal.framework */; };
+		C4FDB4F91B4E1BA300AC3DBD /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDB4F81B4E1BA300AC3DBD /* MetalKit.framework */; };
+		C4FDB4FB1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDB4FA1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		C43EBAD21B4E0118004378BB /* iOSJunkMetalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSJunkMetalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43EBAD71B4E0118004378BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43EBAD81B4E0118004378BB /* iOSJunkMetalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSJunkMetalTests.m; sourceTree = "<group>"; };
+		C43EBAE41B4E055B004378BB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		C4FDB4F81B4E1BA300AC3DBD /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		C4FDB4FA1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FDB4FB1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework in Frameworks */,
+				C4FDB4F91B4E1BA300AC3DBD /* MetalKit.framework in Frameworks */,
+				C43EBAE51B4E055B004378BB /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 		C43EBAB01B4E0118004378BB = {
 			isa = PBXGroup;
 			children = (
+				C43EBAE61B4E0561004378BB /* Frameworks */,
 				C43EBABB1B4E0118004378BB /* iOSJunkMetal */,
 				C43EBAD51B4E0118004378BB /* iOSJunkMetalTests */,
 				C43EBABA1B4E0118004378BB /* Products */,
@@ -119,6 +129,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C43EBAE61B4E0561004378BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4FDB4FA1B4E1BA800AC3DBD /* MetalPerformanceShaders.framework */,
+				C4FDB4F81B4E1BA300AC3DBD /* MetalKit.framework */,
+				C43EBAE41B4E055B004378BB /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +188,7 @@
 				TargetAttributes = {
 					C43EBAB81B4E0118004378BB = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5KKBRRFCKU;
 					};
 					C43EBAD11B4E0118004378BB = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -347,9 +368,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSJunkMetal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,9 +381,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOSJunkMetal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,6 +443,7 @@
 				C43EBADE1B4E0118004378BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C43EBADF1B4E0118004378BB /* Build configuration list for PBXNativeTarget "iOSJunkMetalTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +452,7 @@
 				C43EBAE11B4E0118004378BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

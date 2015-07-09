@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 Jerry Wong. All rights reserved.
 //
 
+#import <Metal/Metal.h>
+#import <MetalKit/MetalKit.h>
+
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -13,6 +16,10 @@
 @end
 
 @implementation ViewController
+
+- (void)loadView {
+    self.view = [[MTKView alloc] init];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
